@@ -2,7 +2,7 @@
 
 
 // Screen
-function screen(width, height) {
+function Screen(width, height) {
         this.canvas = document.createElement("canvas");
         this.canvas.width = this.width = width;
         this.canvas.height = this.height = height;
@@ -11,14 +11,14 @@ function screen(width, height) {
         document.body.appendChild(this.canvas);
     };
 
-screen.prototype.drawSprite = function(sp, x, y) {
+Screen.prototype.drawSprite = function(sp, x, y) {
 	 this.ctx.drawImage(sp.img, sp.x, sp.y, sp.w, sp.h, x, y, sp.w, sp.h);
 
 };
 
 
 // Sprite
-function sprite(img, x, y, w, h) {
+function Sprite(img, x, y, w, h) {
       this.img = img;
       this.x = x;
       this.y = y;
@@ -27,7 +27,7 @@ function sprite(img, x, y, w, h) {
 };
 
 // InputHandeler
-function inputHandeler() {
+function InputHandeler() {
 	this.down = {};
 	this.pressed = {};
 
