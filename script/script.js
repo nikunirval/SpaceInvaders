@@ -1,8 +1,3 @@
-/**	
- * Check if to axis aligned bounding boxes intersects
- *
- * @return {bool}  the check result
- */
 function AABBIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
 	return ax < bx+bw && bx < ax+aw && ay < by+bh && by < ay+ah;
 };
@@ -99,13 +94,9 @@ function Sprite(img, x, y, w, h) {
 };
 
 
-/**
- * InputHandeler class, handle and log pressed keys
- */
 function InputHandeler() {
 	this.down = {};
 	this.pressed = {};
-	// capture key presses
 	var _this = this;
 	document.addEventListener("keydown", function(evt) {
 		_this.down[evt.keyCode] = true;
@@ -116,20 +107,9 @@ function InputHandeler() {
 	});
 };
 
-/**
- * Returns whether a key is pressod down
- * @param  {number}  code the keycode to check
- * @return {bool}         the result from check
- */
 InputHandeler.prototype.isDown = function(code) {
 	return this.down[code];
 };
-
-/**
- * Return wheter a key has been pressed
- * @param  {number}  code the keycode to check
- * @return {bool}         the result from check
- */
 InputHandeler.prototype.isPressed = function(code) {
 	// if key is registred as pressed return false else if
 	// key down for first time return true else return false
