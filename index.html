@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Space Invaders</title>
 
-	<script type="text/javascript" src="/script/script.js"></script>
+	<script src="script.js"></script>
 
 	<style>
 	canvas {
@@ -97,12 +97,6 @@ function init() {
 					68 + 111*i, 0, ciSprite.w, ciSprite.h);
 			}
 		},
-		/**
-		 * Create damage effect on city-canvas
-		 * 
-		 * @param  {number} x x-coordinate
-		 * @param  {number} y y-coordinate
-		 */
 		generateDamage: function(x, y) {
 			// round x, y position
 			x = Math.floor(x/2) * 2;
@@ -117,13 +111,6 @@ function init() {
 			this.ctx.clearRect(x-4, y-4, 2, 2);
 			this.ctx.clearRect(x-2, y-6, 2, 2);
 		},
-		/**
-		 * Check if pixel at (x, y) is opaque
-		 * 
-		 * @param  {number} x x-coordinate
-		 * @param  {number} y y-coordinate
-		 * @return {bool}     boolean value if pixel opaque
-		 */
 		hits: function(x, y) {
 			// transform y value to local coordinate system
 			y -= this.y;
