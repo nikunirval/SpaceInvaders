@@ -172,7 +172,7 @@ function update() {
 	// append new bullet to the bullet array if spacebar is
 	// pressed
 	if (input.isPressed(32)) { // Space
-		bullets.push(new Bullet(tank.x + 10, tank.y, -8, 20, 6, "#FF0000"));
+		bullets.push(new Bullet(tank.x + 10, tank.y, -80, 200, 600, "#FF0000"));
 	}
 	// update all bullets position and checks
 	for (var i = 0, len = bullets.length; i < len; i++) {
