@@ -208,6 +208,18 @@ function update() {
 				bullets.splice(i, 1);
 				i--;
 				len--;
+				
+				for (var q = 0, len2 = tank.length; q < len2; q++) {
+			var t = tank[q];
+			if (TTBBIntersect(b.x, b.y, b.width, b.height, t.x, t.y, t.w, t.h)) {
+				tank.splice(q, 1);
+				q--;
+				len2--;
+				bullets.splice(i, 1);
+				i--;
+				len--;
+				
+				
 				// increase the movement frequence of the aliens
 				// when there are less of them
 				switch (len2) {
@@ -229,6 +241,7 @@ function update() {
 					}
 				}
 			}
+		}
 		}
 	}
 	// makes the alien shoot in an random fashion 
