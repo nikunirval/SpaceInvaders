@@ -260,9 +260,9 @@ function update() {
 	}
 	// check if any alien bullets hits tank
 	
-	var t = taSprite;
+	var t = tank;
 	if (TTBBIntersect(b.x, b.y, b.width, b.height, t.x, t.y, t.w, t.h)) {
-		taSprite;
+		tank;
 		bullets.splice(i, 1);
 		i--;
 		len--;
