@@ -2,6 +2,10 @@ function AABBIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
 	return ax < bx+bw && bx < ax+aw && ay < by+bh && by < ay+ah;
 };
 
+function BBCCIntersect(bx, by, bw, bh, cx, cy, cw, ch) {
+	return bx < cx+cw && cx < bx+bw && by < cy+ch && cy < by+bh;
+};
+
 
 /**
  * Bullet class 
