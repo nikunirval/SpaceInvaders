@@ -1,9 +1,6 @@
 function AABBIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
 	return ax < bx+bw && bx < ax+aw && ay < by+bh && by < ay+ah;
 };
-function TTBBIntersect(tx, ty, tw, th, ax, ay, aw, ah) {
-	return tx < ax+aw && ax < tx+tw && ty < ay+ah && ay < ty+th;
-};
 /**
  * Bullet class 
  * 
