@@ -243,7 +243,8 @@ function update() {
 			}
 		}
 		// create and append new bullet
-		bullets.push(new Bullet(a.x + a.w*0.5, a.y + a.h, 6, 2, 4, "#FF0000"));
+		bullets.push(ctx.arc(100,75,50,0,2*Math.PI, "#FF0000"));
+		
 	}
 	// update the aliens at the current movement frequence
 	if (frames % lvFrame === 0) {
