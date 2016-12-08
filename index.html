@@ -58,9 +58,16 @@ function main() {
 		// initate and run the game
 		init();
 		run();
+		drawLives();
 	});
 	img.src = "/images/invaders.png";
 };
+	
+	function drawLives() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+  }
 /**
  * Initate game objects
  */
