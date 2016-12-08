@@ -173,7 +173,7 @@ function update() {
 	tank.x = Math.max(Math.min(tank.x, display.width - (30 + taSprite.w)), 30);
 	// append new bullet to the bullet array if spacebar is
 	// pressed
-	if (input.isDown(32)) { // Space
+	if (input.isPressed(32)) { // Space
 		bullets.push(new Bullet(tank.x + 10, tank.y, -8, 2, 12, "#fff"));
 	}
 	// update all bullets position and checks
