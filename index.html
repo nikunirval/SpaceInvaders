@@ -119,7 +119,7 @@ function init() {
 			// round x, y position
 			x = Math.floor(x/2) * 2;
 			y = Math.floor(y/2) * 2;
-			// draw dagame effect to canva
+			// draw damage effect to canvas
 			this.ctx.clearRect(x-2, y-2, 4, 4);
 			this.ctx.clearRect(x+2, y-4, 2, 4);
 			this.ctx.clearRect(x+4, y, 2, 2);
@@ -286,13 +286,7 @@ function update() {
 		}
 	}
 };
-	
-function newBulletIntersect() {
-	
-		if (TTBBIntersect(b.x, b.y, b.width, b.height, t.x, t.y, t.w)) {
-			document.write("kdsfjlkasj");	
-		}
-}
+
 /**
  * Render the game state to the canvas
  */
