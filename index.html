@@ -261,9 +261,6 @@ function update() {
 		// create and append new bullet
 		bullets.push(new Bullet(b.x + b.w*0.5, b.y + b.h, 4, 13, 5, "#FF0000"));
 		
-		if (TTBBIntersect(t.x, t.y, t.w, 100, b.x, b.y, b.w, b.h)) {
-			document.write("kdsfjlkasj");	
-		}
 	}
 	// update the aliens at the current movement frequence
 	if (frames % lvFrame === 0) {
@@ -289,6 +286,13 @@ function update() {
 		}
 	}
 };
+	
+function newBulletIntersect() {
+	
+		if (TTBBIntersect(b.x, b.y, b.width, b.height, t.x, t.y, t.w)) {
+			document.write("kdsfjlkasj");	
+		}
+}
 /**
  * Render the game state to the canvas
  */
