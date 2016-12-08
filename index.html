@@ -68,6 +68,12 @@ function main() {
     ctx.fillStyle = "#0095DD";
     ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
   }
+	lives--;
+        if (!lives) {
+          alert("GAME OVER!!! Your score is " + score);
+          document.location.reload();
+        } 
+	
 /**
  * Initate game objects
  */
