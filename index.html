@@ -249,12 +249,8 @@ function update() {
 		// create and append new bullet
 		bullets.push(new Bullet(a.x + a.w*0.5, a.y + a.h, 6, 2, 4, "#FF0000"));
 		
-		for (var z = 0, len3 = tank.length; z < len3; z++) {
-			var t = tank[z];
 			if (TTBBIntersect(a.x, a.y, a.width, a.height, t.x, t.y, t.w, t.h)) {
-				tank.splice(z, 1);
-				z--;
-				len3--;
+				tank.splice;
 				bullets.splice(i, 1);
 				i--;
 				len--;
