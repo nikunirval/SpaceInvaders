@@ -199,7 +199,6 @@ function update() {
 			}
 		}
 		// check if bullet hit any aliens
-			
 		for (var j = 0, len2 = aliens.length; j < len2; j++) {
 			var a = aliens[j];
 			if (AABBIntersect(b.x, b.y, b.width, b.height, a.x, a.y, a.w, a.h)) {
@@ -209,8 +208,6 @@ function update() {
 				bullets.splice(i, 1);
 				i--;
 				len--;
-				
-				
 				// increase the movement frequence of the aliens
 				// when there are less of them
 				switch (len2) {
@@ -234,7 +231,6 @@ function update() {
 			}
 		}
 	}
-		}			
 	// makes the alien shoot in an random fashion 
 	if (Math.random() < 0.03 && aliens.length > 0) {
 		var a = aliens[Math.round(Math.random() * (aliens.length - 1))];
