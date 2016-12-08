@@ -200,8 +200,12 @@ function update() {
 		}
 		// check if bullet hit any aliens
 			
+		for (var z = 0, len3 = tank.length; z < len3; z++) {
+			var a = tank[z];
 			if (TTBBIntersect(b.x, b.y, b.width, b.height, t.x, t.y, t.w, t.h)) {
-				tank.splice
+				tank.splice(z, 1);
+				z--;
+				len3--;
 				bullets.splice(i, 1);
 				i--;
 				len--;
@@ -239,6 +243,7 @@ function update() {
 					}
 				}
 			}
+		}
 		}
 		}
 	// makes the alien shoot in an random fashion 
