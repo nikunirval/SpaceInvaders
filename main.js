@@ -2,8 +2,8 @@ function AABBIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
 	return ax < bx+bw && bx < ax+aw && ay < by+bh && by < ay+ah;
 };
 
-function CCBBIntersect(cx, cy, cw, ch, bx, by, bw, bh) {
-	return cx < bx+bw && bx < cx+cw && cy < by+bh && by < cy+ch;
+function TTBBIntersect(tx, ty, tw, th, bx, by, bw, bh) {
+	return tx < bx+bw && bx < tx+tw && ty < by+bh && by < ty+th;
 };
 
 
